@@ -21,4 +21,20 @@ function showDate() {
     }
 }
 
+function showDaysCount() {
+    let today = new Date();
+    let inputDate = document.querySelector('input[type=date]')
+    let birthday = new Date(inputDate.value);
+    let daysCount = (today - birthday)/1000/60/60/24;
+    daysCount = Math.floor(daysCount);
+    let out = document.getElementById('gonedays');
+    out.innerHTML = 'Со дня вашего рождения прошло: ' + daysCount;
+}
+
+function clean() {
+    let inputDate = document.querySelector('input[type=date]')
+    inputDate.value = '';
+    let out = document.getElementById('gonedays');
+    out.innerHTML = '';
+}
 

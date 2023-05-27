@@ -8,8 +8,17 @@
     <link rel="stylesheet" href="main.css">
     <script src="lab8.js"></script>
     <style>
+        button {
+            background-color: rgb(128, 44, 44);
+            color: rgb(255, 240, 248);
+            border: 3px solid;
+            border-radius: 7px;
+            padding: 7px;
+            margin-bottom: 5px;
+            margin-top: 15px;
+        }
         .date {
-            background-color: rgb(178, 78, 125);
+            background-color: rgb(152, 26, 30);
             color: rgb(255, 240, 248);
             border: 3px solid;
             border-radius: 7px;
@@ -31,6 +40,17 @@
         <div id="current-date4" class="date"></div>
         <div id="current-date5" class="date"></div>
         <br>
+
+        <div>
+            <label>Дата рождения: <input type="date"></label>
+        </div>
+        <div>
+            <button onclick="showDaysCount()">Показать число дней</button>
+        </div>
+        <div id="gonedays" class="days"></div>
+        <div>
+            <button onclick="clean()">Начать заново</button>
+        </div>
     </main>
     
     <footer>
